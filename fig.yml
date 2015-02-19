@@ -1,0 +1,7 @@
+php:
+    build: docker/php
+    ports:
+        - 80:80
+    volumes:
+        - .:/app
+    command:  apachectl -f apache2.conf -e info -DFOREGROUND
